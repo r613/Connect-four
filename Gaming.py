@@ -3,13 +3,14 @@ from User import Print
 import os 
 
 def Round(matrix,size_v,size_h,team,round):
+    #os.system('clear')
     Print(matrix)
     print "You are at round No: {}".format(round)
     print "Team {} now it's your turn".format(team)
     move = Input("In what column would you like to place your piece?") #Gets the row nubmers in which the player wants to enter his piece #limit player to existing rows only
     matrix = placing(matrix,move,size_v,size_h,team)#Places the piece in the matrix ()
     
-    os.system('clear')
+    
     
     return matrix
 
