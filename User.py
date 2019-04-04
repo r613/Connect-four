@@ -9,6 +9,13 @@ def Print(matrix):
     text = ""
     for row in matrix:
         text += "\n" + str(Print_row(row))
+    text += "\n"
+    for i in range(len(row)):
+        text += " | "
+    text += "\n"
+    for i in range(len(row)):
+        text  += (" "*(2-len(str(i)))) + "{} ".format(i+1)
+            
     print text
 def Print_row(row):
     text = ""
