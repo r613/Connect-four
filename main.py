@@ -1,4 +1,4 @@
-#Connect-Four v2.0
+#Connect-Four v2.1
 from Finder import finder
 from Finder import daig
 from Finder import diag
@@ -38,6 +38,8 @@ def menu():
             break
 
         if full(matrix,size_v,size_h):
+            Print(matrix)
+            print "Tie! The board is full!"
             game_on = False 
 
 menu()

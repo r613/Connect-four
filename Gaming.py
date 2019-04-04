@@ -16,9 +16,11 @@ def Round(matrix,size_v,size_h,team,round):
 
 def placing(matrix,size_v,size_h,char):
     row = Input("In what column would you like to place your piece?")
-    if row < size_h:
+    if row < size_h+1:
         pass
     else:
+        return placing(matrix,size_v,size_h,char)
+    if matrix[0][row-1] != " ":
         return placing(matrix,size_v,size_h,char)
     for i in range(0,size_v-1): #we don't count the last row - since we try checking what's under every row (and if we check what's under the last row, we can get lots of errors)
         if matrix[i+1][row-1] != " ": # If the row is not empty -1 for the row since the row starts from 0
